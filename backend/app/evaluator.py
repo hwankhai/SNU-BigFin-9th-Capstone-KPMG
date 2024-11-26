@@ -55,7 +55,6 @@ class HallucinationEvaluator:
                     lambda: self.client.chat.completions.create(
                         model="gpt-4o-mini",
                         messages=[
-                            {"role": "system", "content": "You are a hallucination detection expert."},
                             {"role": "user", "content": prompt}
                         ],
                         temperature=0,
@@ -83,7 +82,16 @@ class HallucinationEvaluator:
             )
             
             nonfabric_response = await self.get_gpt_response(formatted_nonfabric_prompt)
-            has_nonfabric_hallucination = "NONE" in nonfabric_response
+            if 'NONE' in nonfabric_response:
+                result = {
+                    "has_hallucination": True,
+                    "explanation": "질문과 관련이 없는 답변을 하는 할루시네이션",
+                    "details": {
+                        "phase1_result": await self.translate_to_korean(nonfabric_response),
+                        "judgment_result": None
+                    }
+                }
+                return result
             
             # Phase 2: Knowledge-based Judgment
             judgment_prompt = self.read_prompt(os.path.join(self.prompt_dir, 'Judgment.txt'))
@@ -98,34 +106,19 @@ class HallucinationEvaluator:
             )
             
             judgment_response = await self.get_gpt_response(formatted_judgment_prompt)
+            judgment_response_ko = await self.translate_to_korean(judgment_response)
             has_judgment_hallucination = 'INCORRECT' in judgment_response or 'INCONCLUSIVE' in judgment_response
             
-            # 결과 분석
-            has_hallucination = has_nonfabric_hallucination or has_judgment_hallucination
-            
             result = {
-                "has_hallucination": has_hallucination,
-                "explanation": judgment_response if has_judgment_hallucination else (
-                    "질문과 관련이 없는 답변을 하는 할루시네이션" if has_nonfabric_hallucination else 
-                    "할루시네이션이 감지되지 않았습니다."
-                ),
+                "has_hallucination": has_judgment_hallucination,
+                "explanation": judgment_response_ko,
                 "details": {
-                    "phase1_result": nonfabric_response,
-                    "judgment_result": judgment_response if has_judgment_hallucination else None
+                    "phase1_result": await self.translate_to_korean(nonfabric_response),
+                    "judgment_result": judgment_response_ko
                 }
             }
             
-            # 결과를 한국어로 번역
-            translated_result = {
-                "has_hallucination": result["has_hallucination"],
-                "explanation": await self.translate_to_korean(result["explanation"]),
-                "details": {
-                    "phase1_result": await self.translate_to_korean(result["details"]["phase1_result"]),
-                    "judgment_result": await self.translate_to_korean(result["details"]["judgment_result"]) if result["details"]["judgment_result"] else None
-                }
-            }
-            
-            return translated_result
+            return result
 
         except asyncio.TimeoutError:
             error_msg = "평가 요청이 시간 초과되었습니다. 다시 시도해주세요."
