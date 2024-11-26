@@ -1,0 +1,57 @@
+As an objective responder, your primary role is to provide accurate answers by extracting relevant information from available knowledge sources,
+which are presented as article titles and summaries. Your task involves carefully reviewing these articles to find information directly pertinent
+to the questions asked. When responding, focus solely on the relevant details found in the knowledge provided. If the provided knowledge does not
+contain the necessary details to answer a question, respond with "No specific information is available."
+
+#Query#: Was the Peace of Westphalia signed in Munster and Osnabruck, Germany? [Where was the Peace of Westphalia signed?]
+#Knowledge#: Title: Peace of Westphalia. Article: The Peace of Westphalia (, ) is the collective name for two peace treaties signed in October 1648
+in the Westphalian cities of Osnabruck and Munster. They ended the Thirty Years' War (1618âĂŞ1648) and brought peace to the Holy Roman Empire,
+closing a calamitous period of European history that killed approximately eight million people. Holy Roman Emperor Ferdinand III, the kingdoms of
+France and Sweden, and their respective allies among the princes of the Holy Roman Empire, participated in the treaties. The negotiation process
+was lengthy and complex.
+Title: Peace of Westphalia. Article: Talks took place in two cities, because each side wanted to meet on territory under its own control. A total
+of 109 delegations arrived to represent the belligerent states, but not all delegations were present at the same time. Two treaties were signed to
+end the war in the Empire: the Treaty of Munster and the Treaty of Osnabruck.
+#Answer#: Yes, the Peace of Westphalia was signed in Munster and Osnabruck, Germany.
+
+#Query#: Did Joy Williams compose the score for "Star Wars"? [Who composed the score for "Star Wars"?]
+#Knowledge#: Title: Star Wars (soundtrack). Article: Star Wars (Original Motion Picture Soundtrack) is the soundtrack album to the 1977 film "Star
+Wars", composed and conducted by John Williams and performed by the London Symphony Orchestra. Williams' score for "Star Wars" was recorded over
+eight sessions at Anvil Studios in Denham, England on March 5, 8âĂŞ12, 15 and 16, 1977. The score was orchestrated by Williams, Herbert W. Spencer,
+Alexander Courage, Angela Morley, Arthur Morton and Albert Woodbury. Spencer orchestrated the scores for "The Empire Strikes Back" and "Return of
+the Jedi".
+Title: Music of Star Wars. Article: For the Disney+ series "The Book of Boba Fett", Ludwig Goransson composes the main theme, while Joseph Shirley
+composes the score. "Obi-Wan Kenobi". For the Disney+ series "Obi-Wan Kenobi", John Williams returned to write the main theme. Natalie Holt
+composed the rest of the score, making her the first woman to score a live-action "Star Wars" project. "Andor". For the Disney+ series "Andor",
+Nicholas Britell composes the score. "Ahsoka".
+#Answer#: No, the score for "Star Wars" was composed by John Williams, instead of Joy Williams.
+
+#Query#: Did William Styron write the novel "Sophie's Choice"? [Who wrote the novel "Sophie's Choice"?]
+#Knowledge#: Title: Sophie's Choice (novel). Article: "Sophie's Choice" generated significant controversy at time of its publication. Sylvie Mathe
+notes that "Sophie's Choice", which she refers to as a "highly controversial novel", appeared in press in the year following the broadcast of the
+NBC miniseries "Holocaust" (1978), engendering a period in American culture where "a newly-raised consciousness of the Holocaust was becoming a
+forefront public issue."
+Title: Sophie's Choice (novel). Article: Stingo, a novelist who is recalling the summer when he began his first novel, has been fired from his
+low-level reader's job at the publisher McGraw-Hill and has moved into a cheap boarding house in Brooklyn, where he hopes to devote some months to
+his writing. While he is working on his novel, he is drawn into the lives of the lovers Nathan Landau and Sophie Zawistowska, fellow boarders at
+the house, who are involved in an intense and difficult relationship.
+#Answer#: No specific information is available.
+...
+
+#Query#: Was Mexico involved in the "Bracero Program" with the United States during World War II? [Which country was involved in the "Bracero
+Program" with the United States during World War II?]
+#Knowledge#: Title: Latin America during World War II. Article: In addition to those in the armed forces, tens of thousands of Mexican men were
+hired as farm workers in the United States during the war years through the "Bracero" program, which continued and expanded in the decades after
+the war. World War II helped spark an era of rapid industrialization known as the Mexican Miracle. Mexico supplied the United States with more
+strategic raw materials than any other country, and American aid spurred the growth of industry. President Avila was able to use the increased
+revenue to improve the country's credit, invest in infrastructure, subsidize food, and raise wages.
+Title: Military history of Mexico. Article: Although most countries in the Western Hemisphere eventually entered the war on the Allies' side,
+Mexico and Brazil were the only Latin American nations that sent troops to fight overseas. The cooperation of Mexico and the United States in World
+War II helped bring about reconciliation between the two countries at the leadership level. In the civil arena, the Bracero Program gave thousands
+of Mexicans the opportunity to work in the US in support of the Allied war effort. This also granted them an opportunity to gain US citizenship by
+enlisting in the military.
+#Answer#: Yes, Mexico was involved in the "Bracero Program" with the United States during World War II.
+
+#Query#: {question}
+#Knowledge#: {knowledge}
+#Answer#:

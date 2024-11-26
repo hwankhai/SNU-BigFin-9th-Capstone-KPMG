@@ -1,0 +1,68 @@
+You are responsible for forming the final judgment on answers based on query results. Review the #Question# and #Answer#, then examine the
+#Query-k# and the corresponding #Knowledge-k#. In the #Judgment# section, determine if the knowledge supports or contradicts the answer, stating
+whether it is CORRECT, INCORRECT, or INCONCLUSIVE. Analyze if the knowledge confirms or refutes each aspect of the answer. If all aspects are
+supported, the answer is CORRECT. If any aspect is contradicted, the answer is INCORRECT. If information is insufficient for a definitive judgment,
+classify it as INCONCLUSIVE.
+
+#Question#: In the midst of 17th-century historical milestones like the rise of Baroque art, groundbreaking scientific discoveries by Galileo and
+Newton, and the expansion of global exploration and colonization, which locations served as the formal signatories for the momentous Peace of
+Westphalia, marking the end of the Thirty Years' War?
+#Answer#: MÃĳnster and OsnabrÃĳck, Germany, and it was signed in 1648.
+#Query-1#: Was the Peace of Westphalia signed in MÃĳnster and OsnabrÃĳck, Germany? [Where was the Peace of Westphalia signed?]
+#Knowledge-1#: Yes, the Peace of Westphalia was signed in MÃĳnster and OsnabrÃĳck, Germany.
+#Query-2#: Was the Peace of Westphalia signed in the year 1648? [When was the Peace of Westphalia signed?]
+#Knowledge-2#: Yes, the Peace of Westphalia was signed in October 1648.
+#Judgment#: The answer claims that the Peace of Westphalia was signed in MÃĳnster and OsnabrÃĳck, Germany, in the year 1648. The answer's mention
+of "MÃĳnster and OsnabrÃĳck, Germany," is supported by the first query, confirming that the treaties were indeed signed in these cities. Regarding
+the year, the answer specifies "1648," which is supported by the second query, verifying the signing year as 1648. Both the location and year
+mentioned in the answer are thus validated by the respective queries, leading to a final judgment of CORRECT.
+
+#Question#: Who composed the famous musical score for the 1977 space-themed movie in which the character Luke Skywalker first appeared?
+#Answer#: Joy Williams composed the score for "Star Wars."
+#Query-1#: Was "Star Wars" the 1977 space-themed movie in which the character Luke Skywalker first appeared? [Which 1977 space-themed movie
+featured the first appearance of the character Luke Skywalker?]
+#Knowledge-1#: "Star Wars," released in 1977, is the space-themed movie in which the character Luke Skywalker first appeared.
+#Query-2#: Did Joy Williams compose the score for "Star Wars"? [Who composed the score for "Star Wars"?]
+#Knowledge-2#: No, the score for "Star Wars" was composed by John Williams, instead of Joy Williams.
+#Judgment#: The answer states that "Star Wars" is the 1977 space-themed movie in which the character Luke Skywalker first appeared and Joy Williams
+is the composer. The first query supports the movie part of the answer, confirming "Star Wars" as the 1977 film featuring Luke Skywalker. However,
+the second query contradicts the composer part, revealing that John Williams, not Joy Williams, composed the score. Therefore, the final judgment
+is INCORRECT.
+
+#Question#: Who wrote the novel that inspired the film where Meryl Streep delivered her most acclaimed performance?
+#Answer#: William Styron
+#Query-1#: In which film did Meryl Streep deliver her most acclaimed performance? [What is Meryl Streep's most critically acclaimed film role?]
+#Knowledge-1#: Meryl Streep's most acclaimed performance is often cited as her role in "Sophie's Choice."
+#Query-2#: Which novel inspired the film "Sophie's Choice"? [What novel was the film "Sophie's Choice" based on?]
+#Knowledge-2#: The film "Sophie's Choice" is inspired by the novel with the same name.
+#Query-3#: Did William Styron write the novel "Sophie's Choice"? [Who wrote the novel "Sophie's Choice"?]
+#Knowledge-3#: No specific information is available.
+#Judgment#: The answer claims that William Styron wrote the novel that inspired the film "Sophie's Choice," in which Meryl Streep delivered her
+most acclaimed performance. The first query confirms that Meryl Streep's most acclaimed performance is often cited as her role in "Sophie's
+Choice." The second query establishes that the film "Sophie's Choice" was indeed inspired by a novel of the same name. However, the third query
+fails to provide specific information about the author of the novel "Sophie's Choice." Due to this lack of direct confirmation about the author,
+the claim that William Styron wrote the novel cannot be conclusively verified. Consequently, the final judgment for the answer is INCONCLUSIVE.
+...
+
+#Question#: The "Bracero Program" was a bilateral agreement initiated during World War II to address labor shortages in agriculture and railroad
+work. This program was established between the United States and which country of birth of the artist Frida Kahlo, known for her unique paintings
+and cultural influence?
+#Answer#: Mexico, which is bordered to the north by the United States.
+#Query-1#: What is the country of birth of artist Frida Kahlo? [Where was artist Frida Kahlo born?]
+#Knowledge-1#: No specific information is available.
+#Query-2#: Was Mexico involved in the "Bracero Program" with the United States during World War II? [Which country was involved in the "Bracero
+Program" with the United States during World War II?]
+#Knowledge-2#: Yes, Mexico was involved in the "Bracero Program" with the United States during World War II.
+#Query-3#: Is Mexico bordered to the north by the United States? [Which country is bordered to the north by the United States?]
+#Knowledge-3#: Yes, Mexico is bordered to the north by the United States.
+#Judgment#: The answer claims that Mexico, known as the birthplace of artist Frida Kahlo and bordered to the north by the United States,
+participated in the "Bracero Program." The first query does not provide specific information about Frida Kahlo's birthplace. However, the second
+query confirms that Mexico was indeed involved in the "Bracero Program" with the United States during World War II. The third query verifies that
+Mexico is bordered to the north by the United States. Since both Frida Kahlo's birthplace and the country participating in the "Bracero Program"
+with the United States refer to the same country, the absence of direct information about Kahlo's birthplace does not affect the overall
+correctness of the answer. Therefore, the final judgment is CORRECT.
+
+#Question#: {question}
+#Answer#: {answer}
+{query_knowledge}
+#Judgment#:
